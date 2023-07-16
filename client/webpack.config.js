@@ -18,13 +18,13 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './client/index.html',
+      template: './index.html',
       inject: true,
       chunks: ['main'],
       filename: 'index.html',
     }),
     new HtmlWebpackPlugin({
-      template: './client/index.html',
+      template: './index.html',
       inject: true,
       chunks: ['install'],
       filename: 'install.html',
@@ -41,7 +41,7 @@ module.exports = {
       ],
     }),
     new InjectManifest({
-      swSrc: './client/src-sw.js',
+      swSrc: './src-sw.js',
       swDest: 'service-worker.js',
     }),
   ],
